@@ -1,4 +1,4 @@
-package com.koszalka.shortener.persistence.entities;
+package com.koszalka.forecast.persistence.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,13 +1,15 @@
-package com.koszalka.shortener.bo;
+package com.koszalka.forecast.bo;
 
-import com.koszalka.shortener.persistence.dto.CityDTO;
-import com.koszalka.shortener.persistence.entities.CityEntity;
-import com.koszalka.shortener.persistence.repositories.CityRepository;
+import com.koszalka.forecast.persistence.dto.CityDTO;
+import com.koszalka.forecast.persistence.entities.CityEntity;
+import com.koszalka.forecast.persistence.repositories.CityRepository;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class CityBO {
@@ -30,6 +32,10 @@ public class CityBO {
 
     public CityEntity getCityByName(String city) {
         return cityRepository.getCityByName(city);
+    }
+
+    public List<CityEntity> getCities() {
+        return cityRepository.findAll();
     }
 
 //    private Long verifyIfHashAlreadyExist(String hash, Long expirationDate) {

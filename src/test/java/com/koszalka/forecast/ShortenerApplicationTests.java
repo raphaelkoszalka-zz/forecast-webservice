@@ -1,4 +1,4 @@
-package com.koszalka.shortener;
+package com.koszalka.forecast;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

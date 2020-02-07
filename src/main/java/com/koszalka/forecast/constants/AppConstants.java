@@ -1,8 +1,5 @@
-package com.koszalka.shortener.constants;
+package com.koszalka.forecast.constants;
 
-import lombok.Getter;
-
-@Getter
 public enum AppConstants {
 
     ALREADY_EXISTS("exists"),

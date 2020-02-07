@@ -6,6 +6,67 @@ There's only one endpoint (or primitive) that will receive a POST or a GET
 if it's a POST it will persist a new city if valid (by openweathermaps stardand) and if so 
 the city will be stored in the database.
 
+## Endpoints
+
+### GET 
+
+#### /v1/cities
+
+Will retrieve all cities stored in the database in the following array list of City objects.
+
+```json
+[
+    {
+        "city": "Blumenau",
+        "lat": "-26.893090",
+        "lng": "-49.075084"
+    },
+    {
+        "city": "Guarapuava",
+        "lat": "-25.386091",
+        "lng": "-51.479243"
+    },
+    {
+        "city": "Lages",
+        "lat": "-27.859365",
+        "lng": "-50.312228"
+    }
+]
+```
+#### /v1/city/{cityName}
+
+Will retrieve one city object, if persisted in the database, by it's name.
+
+````json
+{
+    "city": "Blumenau",
+    "lat": "-26.893090",
+    "lng": "-49.075084"
+}
+````
+
+
+### POST
+
+#### /v1/new
+
+This post route will check if the city is already persisted in the database, if not will persist it and then return
+a 201 code (HttpResponse.CREATED) or if find the same city already store will return a 409 code (HttpResponse.CONFLICT)^.
+
+PS: The front-end will check if the city exists at the OpenWeatherMap database and only if it exists there will perform
+this POST to the microservice, this way we can mitigate computer power and also cloud requests (meaning money).
+
+##### Payload
+
+````json
+{
+    "city": "{cityName}",
+    "lat": "{cityLat}",
+    "lng": "{cityLng}"
+}
+````
+
+
 ## How to run
 
 - Import the project into your IDE (it's preferable to be IntelliJ)

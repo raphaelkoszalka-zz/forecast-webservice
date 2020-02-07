@@ -1,14 +1,14 @@
-package com.koszalka.shortener.unit;
+package com.koszalka.forecast.unit;
 
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.payload.PayloadDocumentation.requestBody;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.koszalka.shortener.bo.CityBO;
-import com.koszalka.shortener.persistence.dto.CityDTO;
-import com.koszalka.shortener.persistence.entities.CityEntity;
-import com.koszalka.shortener.rest.controllers.ForecasterController;
+import com.koszalka.forecast.bo.CityBO;
+import com.koszalka.forecast.persistence.dto.CityDTO;
+import com.koszalka.forecast.persistence.entities.CityEntity;
+import com.koszalka.forecast.rest.controllers.ForecasterController;
 
 import org.junit.Before;
 import org.junit.Test;

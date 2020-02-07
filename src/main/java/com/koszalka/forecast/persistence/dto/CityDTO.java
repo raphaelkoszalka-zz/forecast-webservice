@@ -1,12 +1,5 @@
-package com.koszalka.shortener.persistence.dto;
+package com.koszalka.forecast.persistence.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@NoArgsConstructor
 public class CityDTO {
 
     private String city;
