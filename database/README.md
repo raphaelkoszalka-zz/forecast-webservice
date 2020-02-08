@@ -1,6 +1,6 @@
 ## Database
 In this project I am using PostgreSQL, but since we are utilizing Liquibase, the database is agnostic.
-You can choose which database you prefer. Like MongoDB For example.
+You can choose which database you prefer.
 
 ### How to
 
