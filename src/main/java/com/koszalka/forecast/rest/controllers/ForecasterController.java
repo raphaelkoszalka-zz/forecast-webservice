@@ -36,6 +36,12 @@ public class ForecasterController implements CityAPI {
     }
 
     @Override
+    public ResponseEntity<Object> deleteCity(HttpServletResponse response, String city) {
+        cityBO.delete(city);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @Override
     public ResponseEntity<CityDTO> postCity(CityDTO dto)  {
         // check if the city is already persisted at the DB
         // if so will return a 409 (conflict)
@@ -44,7 +50,6 @@ public class ForecasterController implements CityAPI {
         }
         cityBO.saveOne(dto);
         return new ResponseEntity<CityDTO>(HttpStatus.CREATED);
-
     }
 
 }

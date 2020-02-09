@@ -34,18 +34,13 @@ public class CityBO {
         return cityRepository.getCityByName(city);
     }
 
+    public void delete(String city) {
+        CityEntity c = getCityByName(city);
+        cityRepository.delete(c);
+    }
+
     public List<CityEntity> getCities() {
         return cityRepository.findAll();
     }
 
-//    private Long verifyIfHashAlreadyExist(String hash, Long expirationDate) {
-//        return cityRepository.verifyIfHashAlreadyExist(hash, expirationDate);
-//    }
-
-    public ResponseEntity<CityDTO> send301Redirect(HttpServletResponse response, String newUrl) {
-        response.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
-        response.setHeader("Location", newUrl);
-        response.setHeader("Connection", "close");
-        return new ResponseEntity<CityDTO>(HttpStatus.MOVED_PERMANENTLY);
-    }
 }

@@ -21,8 +21,11 @@ public interface CityAPI {
     @RequestMapping(path = "/cities", method = RequestMethod.GET)
     ResponseEntity<List<CityEntity>> getCities(HttpServletResponse response);
 
+    @RequestMapping(path = "/delete/{city}", method = RequestMethod.DELETE)
+    ResponseEntity<Object> deleteCity(HttpServletResponse response, @PathVariable("city") String city);
+
     @RequestMapping(path = "/city/{city}",method = RequestMethod.GET)
-    ResponseEntity<CityEntity> getCity(HttpServletResponse response, @PathVariable("city") String urlString);
+    ResponseEntity<CityEntity> getCity(HttpServletResponse response, @PathVariable("city") String city);
 
 }
 
