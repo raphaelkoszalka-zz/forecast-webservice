@@ -76,7 +76,7 @@ Will delete specified city from database.
 ## How to run
 
 - Import the project into your IDE (it's preferable to be IntelliJ)
-- Install Lombok Plugin for @Getter and @Setter annotation (not necessary, I have wrote all getter and setters)
+- Install Lombok Plugin for @Getter and @Setter annotation (not necessary, I wrote all getter and setters)
 - Enable annotation process at ```Editor > Compiler > Annotation Processors```
 - bootRun the application (with Gradle)
 
