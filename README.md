@@ -66,6 +66,12 @@ this POST to the microservice, this way we can mitigate computer power and also 
 }
 ````
 
+### DELETE
+
+##### /v1/delete/{city}
+
+Will delete specified city from database.
+
 
 ## How to run
 
